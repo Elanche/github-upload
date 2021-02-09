@@ -17,11 +17,15 @@ class System {
   int RunningProcesses();             // TODO: See src/system.cpp
   std::string Kernel();               // TODO: See src/system.cpp
   std::string OperatingSystem();      // TODO: See src/system.cpp
-
+  static long int uptime;
   // TODO: Define any necessary private members
  private:
   Processor cpu_ = {};
   std::vector<Process> processes_ = {};
+  std::string kernel;
+  std::string os;
+  float mem_util;
+  int running_procs;
+  int total_procs;
 };
-
 #endif
